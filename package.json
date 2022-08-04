@@ -1,16 +1,14 @@
 {
-  "name": "new-project",
-  "version": "1.0.0",
-  "author": "eric",
-  "description": "eric template",
+  "name": "ICNaming",
+  "version": "0.2.0",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build:mainnet": "parcel build src/index.html"
+  },
   "dependencies": {
-    "array-unique-proposal": "^0.3.4",
-    "axios": "^0.27.2",
+    "@douyinfe/semi-ui": "^2.15.1",
     "bignumber.js": "^9.0.2",
-    "browser-fs-access": "^0.31.0",
-    "browser-unhandled-rejection": "^1.0.2",
     "classnames": "^2.3.1",
-    "cross-env": "^7.0.3",
     "mobx": "^5.15.7",
     "mobx-react": "^6.3.1",
     "react": "^17.0.2",
@@ -26,7 +24,9 @@
     "@parcel/transformer-svg-react": "2.6.0",
     "@parcel/transformer-typescript-tsc": "2.6.0",
     "@parcel/transformer-webmanifest": "2.6.0",
-    "@types/react": "^17.0.48",
+    "@types/lodash": "^4.14.182",
+    "@types/multicoin-address-validator": "^0.5.0",
+    "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
     "lint-staged": "^13.0.3",
     "parcel": "2.6.0",
@@ -34,26 +34,7 @@
     "postcss-modules": "^4.3.1",
     "prettier": "^2.7.1",
     "process": "^0.11.10",
-    "typescript": "~4.7.4",
-    "workbox-cli": "^6.5.4"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "none",
-    "arrowParens": "avoid",
-    "tabWidth": 2
-  },
-  "lint-staged": {
-    "*.{html,md,less,json,yml,js,ts,tsx}": "prettier --write"
-  },
-  "browserslist": "and_chr 69, safari 13, ios_saf 13",
-  "scripts": {
-    "test": "lint-staged",
-    "start": "rm -rf dist/ .parcel-cache/  &&  parcel src/index.html",
-    "pack": "parcel build src/index.html --public-url .",
-    "build": "rm -rf dist/  &&  npm run pack  &&  workbox generateSW",
-    "packProd": "cross-env NODE_ENV=production parcel build src/index.html --public-url .",
-    "buildProd": "rm -rf dist/  &&  npm run packProd  &&  workbox generateSW"
+    "typescript": "~4.7.4"
   },
   "resolutions": {
     "@types/react": "17.0.2",
